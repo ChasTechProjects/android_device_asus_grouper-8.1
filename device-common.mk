@@ -116,9 +116,18 @@ PRODUCT_PACKAGES += \
     audio.usb.default \
     audio.r_submix.default
 
+# Audio configuration
+USE_XML_AUDIO_POLICY_CONF := 1
+
 PRODUCT_COPY_FILES += \
-    device/asus/grouper/audio/audio_policy.conf:system/etc/audio_policy.conf \
     device/asus/grouper/audio/mixer_paths.xml:system/etc/mixer_paths.xml \
+    device/asus/grouper/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
+    device/asus/grouper/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
+    frameworks/av/services/audiopolicy/config/a2dp_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_audio_policy_configuration.xml \
+    frameworks/av/services/audiopolicy/config/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
+    frameworks/av/services/audiopolicy/config/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml \
+    frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml \
+    frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_policy_configuration.xml \
     prebuilts/ndk/current/sources/cxx-stl/stlport/libs/armeabi/libstlport_shared.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstlport.so
 
 # NFC
