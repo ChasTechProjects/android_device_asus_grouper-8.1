@@ -68,7 +68,9 @@ PRODUCT_COPY_FILES += \
     device/asus/grouper/gps/gps.xml:system/etc/gps.xml
 
 PRODUCT_PACKAGES += \
-    libgpsd-compat
+    android.hardware.gnss@1.0-impl \
+    libgpsd-compat \
+    gpsd_shim
 
 # Wi-Fi
 PRODUCT_PACKAGES += \

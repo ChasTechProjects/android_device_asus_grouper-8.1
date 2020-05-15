@@ -45,6 +45,10 @@ TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS := true
 BOARD_EGL_WORKAROUND_BUG_10194508 := true
 HWUI_COMPILE_FOR_PERF := true
 
+# Shims: gpsd
+TARGET_LD_SHIM_LIBS += \
+    /system/vendor/bin/gpsd|/vendor/lib/gpsd_shim.so
+
 # Use clang platform builds
 USE_CLANG_PLATFORM_BUILD := true
 
