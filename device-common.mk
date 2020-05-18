@@ -32,7 +32,7 @@ PRODUCT_COPY_FILES += \
 
 # Prevent surfaceflinger crash
 PRODUCT_COPY_FILES += \
-    device/asus/grouper/91surface:system/etc/init.d/91surface
+    device/asus/grouper/surface.sh:$(TARGET_COPY_OUT_VENDOR)/bin/surface.sh
 
 # HIDL
 DEVICE_MANIFEST_FILE += device/asus/grouper/manifest.xml

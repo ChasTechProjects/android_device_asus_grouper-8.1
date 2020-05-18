@@ -182,6 +182,13 @@ service set_hwui_params /system/bin/set_hwui_params.sh
     group root
     oneshot
 
+# set surface property to prevent surface crash
+service set_surface_param /vendor/bin/surface.sh
+    class main
+    user root
+    group root
+    oneshot
+
 # Bugreport is triggered by holding down volume down and volume up
 service bugreport /system/bin/dumpstate -d -p -B \
         -o /data/data/com.android.shell/files/bugreports/bugreport
