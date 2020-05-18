@@ -142,7 +142,7 @@ on boot
     chmod 600 /sys/bus/iio/devices/iio:device1/scan_elements/in_timestamp_en
     chmod 600 /sys/bus/iio/devices/iio:device1/trigger/current_trigger
 
-service sensors-calib /system/bin/sensors-load-calibration.sh
+service sensors-calib /vendor/bin/sensors-load-calibration.sh
     class main
     user root
     oneshot

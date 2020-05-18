@@ -28,7 +28,7 @@ $(call inherit-product, frameworks/native/build/tablet-7in-hdpi-1024-dalvik-heap
 PRODUCT_COPY_FILES += \
     device/asus/grouper/rootdir/init.grouper.usb.rc:root/init.grouper.usb.rc \
     device/asus/grouper/rootdir/ueventd.grouper.rc:root/ueventd.grouper.rc \
-    device/asus/grouper/set_hwui_params.sh:system/bin/set_hwui_params.sh
+    device/asus/grouper/set_hwui_params.sh:$(TARGET_COPY_OUT_VENDOR)/bin/set_hwui_params.sh
 
 # Prevent surfaceflinger crash
 PRODUCT_COPY_FILES += \
@@ -97,7 +97,7 @@ PRODUCT_PACKAGES += \
 
 # Sensors
 PRODUCT_COPY_FILES += \
-    device/asus/grouper/sensors/sensors-load-calibration.sh:system/bin/sensors-load-calibration.sh
+    device/asus/grouper/sensors/sensors-load-calibration.sh:$(TARGET_COPY_OUT_VENDOR)/bin/sensors-load-calibration.sh
 
 # Sensors HAL
 PRODUCT_PACKAGES += \
