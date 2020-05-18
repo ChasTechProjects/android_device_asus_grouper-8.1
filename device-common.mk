@@ -64,8 +64,8 @@ PRODUCT_COPY_FILES += \
 
 # GPS
 PRODUCT_COPY_FILES += \
-    device/asus/grouper/gps/gps.conf:system/etc/gps.conf \
-    device/asus/grouper/gps/gps.xml:system/etc/gps.xml
+    device/asus/grouper/gps/gps.conf:$(TARGET_COPY_OUT_VENDOR)/etc/gps.conf \
+    device/asus/grouper/gps/gps.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gps.xml
 
 PRODUCT_PACKAGES += \
     android.hardware.gnss@1.0-impl \
@@ -119,7 +119,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     device/asus/grouper/audio/audio_policy.conf:system/etc/audio_policy.conf \
     device/asus/grouper/audio/mixer_paths.xml:system/etc/mixer_paths.xml \
-    prebuilts/ndk/current/sources/cxx-stl/stlport/libs/armeabi/libstlport_shared.so:system/lib/libstlport.so
+    prebuilts/ndk/current/sources/cxx-stl/stlport/libs/armeabi/libstlport_shared.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstlport.so
 
 # NFC
 PRODUCT_PACKAGES += \
