@@ -46,6 +46,8 @@ TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS := true
 BOARD_EGL_WORKAROUND_BUG_10194508 := true
 HWUI_COMPILE_FOR_PERF := true
 
+TARGET_HAS_LEGACY_CAMERA_HAL1 := true
+
 # Shims: gpsd
 TARGET_LD_SHIM_LIBS += \
     /system/vendor/bin/gpsd|/vendor/lib/gpsd_shim.so
@@ -79,4 +81,4 @@ BOARD_CUSTOM_BT_CONFIG := device/asus/grouper/bluetooth/vnd_grouper.txt
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/asus/grouper/bluetooth
 
 # Security
-BOARD_SEPOLICY_DIRS += device/asus/grouper/sepolicy
+#BOARD_SEPOLICY_DIRS += device/asus/grouper/sepolicy

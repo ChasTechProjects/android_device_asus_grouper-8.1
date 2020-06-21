@@ -23,7 +23,8 @@ PRODUCT_COPY_FILES += \
     device/asus/grouper/rootdir/init.grouper.sensors.rc:root/init.grouper.sensors.rc
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.carrier=wifi-only
+    ro.carrier=wifi-only \
+    ro.config.low_ram=true
 
 DEVICE_PACKAGE_OVERLAYS += \
     device/asus/grouper/overlay
