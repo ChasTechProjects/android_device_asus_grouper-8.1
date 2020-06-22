@@ -52,15 +52,10 @@ TARGET_HAS_LEGACY_CAMERA_HAL1 := true
 TARGET_LD_SHIM_LIBS += \
     /system/vendor/bin/gpsd|/vendor/lib/gpsd_shim.so
 
-# Use clang platform builds
-USE_CLANG_PLATFORM_BUILD := true
-
 # Kernel
 BOARD_KERNEL_CMDLINE := androidboot.hardware=$(TARGET_BOOTLOADER_BOARD_NAME) androidboot.selinux=permissive
 TARGET_KERNEL_CONFIG := tegra3_android_defconfig
 TARGET_KERNEL_SOURCE := kernel/asus/grouper
-KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-eabi-4.8/bin
-KERNEL_TOOLCHAIN_PREFIX := arm-eabi-
 BOARD_KERNEL_IMAGE_NAME := zImage
 
 # Wi-Fi
