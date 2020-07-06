@@ -138,6 +138,8 @@ on boot
     restorecon_recursive /sys/devices/system/cpu/cpuquiet/balanced
 
 on property:sys.boot_completed=1
+    chmod 0640 /sys/fs/selinux/enforce
+    chmod 0440 /sys/fs/selinux/policy
     write /sys/block/mmcblk0/queue/read_ahead_kb 256
     write /sys/block/mmcblk0/queue/nr_requests 256
     write /sys/block/mmcblk0/queue/add_random 0
