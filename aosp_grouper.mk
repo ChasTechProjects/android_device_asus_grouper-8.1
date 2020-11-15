@@ -22,14 +22,14 @@ TARGET_SCREEN_HEIGHT := 1280
 TARGET_SCREEN_WIDTH := 800
 
 # Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full_tablet_wifionly.mk)
+$(call inherit-product, vendor/aosp/config/common_full_tablet_wifionly.mk)
 
 # Inherit from grouper device
 $(call inherit-product, device/asus/grouper/device.mk)
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 
-PRODUCT_NAME   := lineage_grouper
+PRODUCT_NAME   := aosp_grouper
 PRODUCT_DEVICE := grouper
 PRODUCT_BRAND  := Google
 PRODUCT_MODEL  := Nexus 7
